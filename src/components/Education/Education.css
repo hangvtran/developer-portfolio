@@ -1,5 +1,9 @@
 .education {
     min-height: 100vh;
+    padding-top: 5rem;       /* move content down */
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    overflow: auto;
 }
 
 .education-body {

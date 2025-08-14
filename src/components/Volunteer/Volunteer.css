@@ -1,0 +1,161 @@
+/* Volunteers Section */
+.volunteers {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 0.1rem;    /* less space above */
+    padding-bottom: 6rem;  /* more space below */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* Volunteer Section Title and Body */
+.volunteer-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* max width for better readability */
+}
+
+.volunteer-body h1 {
+    font-family: var(--primaryFont);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.volunteer-body h4 {
+    font-size: 1.75rem;
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Cards Container */
+.volunteer-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Individual Volunteer Card */
+.volunteercard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+    max-width: 700px; /* card width limit */
+    width: 90%;        /* responsive width */
+    background-color: var(--primary30);
+    transition: background-color 200ms ease-in-out;
+}
+
+.volunteercard:hover {
+    background-color: var(--primary50);
+}
+
+/* Content inside the card */
+.volunteercard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.volunteercard-details1 h2 {
+    font-family: var(--primaryFont);
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.volunteercard-details1 p {
+    font-size: 1.1rem;
+    font-family: Roboto;
+    font-weight: 400;
+    color: var(--tertiary80);
+}
+
+/* Date and field above the title */
+.volunteercard-details2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.volunteercard-details2 h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+/* Image container on the right */
+.volunteercard-imgcontainer {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.volunteercard-imgcontainer > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Media Queries */
+
+/* Medium screens */
+@media screen and (max-width: 992px) {
+    .volunteercard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .volunteercard-imgcontainer {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .volunteercard-imgcontainer > img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 600px) {
+    .volunteer-body h1 {
+        font-size: 2.2rem;
+    }
+
+    .volunteercard-details1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .volunteercard-details1 p {
+        font-size: 1rem;
+    }
+
+    .volunteercard-details2 h5 {
+        font-size: 1.1rem;
+    }
+
+    .volunteercard-imgcontainer > img {
+        width: 100px;
+        height: 100px;
+    }
+}
+

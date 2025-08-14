@@ -57,8 +57,9 @@ import selenium from '../assets/svg/skills/selenium.svg'
 import strapi from '../assets/svg/skills/strapi.svg'
 import tensorflow from '../assets/svg/skills/tensorflow.svg'
 import webix from '../assets/svg/skills/webix.svg'
-import wordpress from '../assets/svg/skills/wordpress.svg'
-
+import powerbi from '../assets/png/powerbi.png'
+import pandas from '../assets/png/pandas.png'
+import tableau from '../assets/svg/skills/tableau.svg'
 import azure from '../assets/svg/skills/azure.svg'
 import blender from '../assets/svg/skills/blender.svg'
 import fastify from '../assets/svg/skills/fastify.svg'
@@ -83,6 +84,8 @@ export const skillsImage = (skill) => {
             return gcp;
         case 'html':
             return html;
+	case 'pandas':
+	    return pandas;
         case 'photoshop':
             return photoshop;
         case 'docker':
@@ -197,8 +200,11 @@ export const skillsImage = (skill) => {
             return tensorflow;
         case 'webix':
             return webix;
-        case 'wordpress':
-            return wordpress;
+	case 'power bi':
+        case 'powerbi':
+            return powerbi;
+        case 'tableau':
+            return tableau;
         case 'azure':
             return azure;
         case 'blender':

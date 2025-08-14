@@ -3,9 +3,8 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 import Fade from 'react-reveal/Fade';
 import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
 import { HiDocumentText } from 'react-icons/hi';
-import { BsFillGearFill } from 'react-icons/bs';
 import { MdPhone } from 'react-icons/md';
-import { FaUser, FaFolderOpen } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
@@ -16,7 +15,6 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 function Navbar() {
     const { theme, setHandleDrawer } = useContext(ThemeContext);
-
     const [open, setOpen] = useState(false);
 
     const handleDrawerOpen = () => {
@@ -49,10 +47,10 @@ function Navbar() {
         MuiDrawer: {
             padding: '0em 1.8em',
             width: '14em',
-            fontFamily: ' var(--primaryFont)',
-            fontStyle: ' normal',
-            fontWeight: ' normal',
-            fontSize: ' 24px',
+            fontFamily: 'var(--primaryFont)',
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            fontSize: '24px',
             background: theme.secondary,
             overflow: 'hidden',
             borderTopRightRadius: '40px',
@@ -178,105 +176,37 @@ function Navbar() {
                 <div onClick={handleDrawerClose}>
                     <div className='navLink--container'>
                         <Fade left>
-                            <NavLink
-                                to='/'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
+                            <NavLink to='/' smooth={true} spy='true' duration={2000}>
                                 <div className={classes.drawerItem}>
-                                    <IoHomeSharp
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Home
-                                    </span>
+                                    <IoHomeSharp className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>Home</span>
                                 </div>
                             </NavLink>
                         </Fade>
 
                         <Fade left>
-                            <NavLink
-                                to='/#about'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
+                            <NavLink to='/#about' smooth={true} spy='true' duration={2000}>
                                 <div className={classes.drawerItem}>
                                     <FaUser className={classes.drawerIcon} />
-                                    <span className={classes.drawerLinks}>
-                                        About
-                                    </span>
+                                    <span className={classes.drawerLinks}>About</span>
                                 </div>
                             </NavLink>
                         </Fade>
 
                         <Fade left>
-                            <NavLink
-                                to='/#resume'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
+                            <NavLink to='/#resume' smooth={true} spy='true' duration={2000}>
                                 <div className={classes.drawerItem}>
-                                    <HiDocumentText
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Resume
-                                    </span>
+                                    <HiDocumentText className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>Resume</span>
                                 </div>
                             </NavLink>
                         </Fade>
 
                         <Fade left>
-                            <NavLink
-                                to='/#services'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <BsFillGearFill
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Services
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
-                                to='/#blog'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <FaFolderOpen
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Blog
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
-                                to='/#contacts'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
+                            <NavLink to='/#contacts' smooth={true} spy='true' duration={2000}>
                                 <div className={classes.drawerItem}>
                                     <MdPhone className={classes.drawerIcon} />
-                                    <span className={classes.drawerLinks}>
-                                        Contact
-                                    </span>
+                                    <span className={classes.drawerLinks}>Contact</span>
                                 </div>
                             </NavLink>
                         </Fade>
