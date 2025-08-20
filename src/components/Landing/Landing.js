@@ -10,8 +10,9 @@ import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaBlogger } from 'react-icons/fa';
+import tableauLogo from '../../assets/png/tableau2.png'; // ensure this file exists
 
-/* style helpers using our theme colors as "props" */
+/* style helpers using theme colors as props */
 const useStyles = makeStyles({
   resumeBtn: (p) => ({
     color: p.primary,
@@ -63,28 +64,50 @@ function Landing() {
         <div className="landing--left" style={{ backgroundColor: theme.primary }}>
           <div className="lcl--content">
             {socialsData?.linkedIn && (
-              <a href={socialsData.linkedIn} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <FaLinkedin className="landing--social" style={{ color: theme.secondary }} />
+              <a href={socialsData.linkedIn} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="landing--social">
+                <div className="icon-box">
+                  <FaLinkedin style={{ color: theme.secondary }} />
+                </div>
               </a>
             )}
+
             {socialsData?.github && (
-              <a href={socialsData.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                <FaGithub className="landing--social" style={{ color: theme.secondary }} />
+              <a href={socialsData.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="landing--social">
+                <div className="icon-box">
+                  <FaGithub style={{ color: theme.secondary }} />
+                </div>
               </a>
             )}
+
+            {socialsData?.tableau && (
+              <a href={socialsData.tableau} target="_blank" rel="noreferrer" aria-label="Tableau" className="landing--social">
+                <div className="icon-box">
+                  <img src={tableauLogo} alt="Tableau" />
+                </div>
+              </a>
+            )}
+
             {socialsData?.twitter && (
-              <a href={socialsData.twitter} target="_blank" rel="noreferrer" aria-label="Twitter / X">
-                <FaTwitter className="landing--social" style={{ color: theme.secondary }} />
+              <a href={socialsData.twitter} target="_blank" rel="noreferrer" aria-label="Twitter / X" className="landing--social">
+                <div className="icon-box">
+                  <FaTwitter style={{ color: theme.secondary }} />
+                </div>
               </a>
             )}
+
             {socialsData?.youtube && (
-              <a href={socialsData.youtube} target="_blank" rel="noreferrer" aria-label="YouTube">
-                <FaYoutube className="landing--social" style={{ color: theme.secondary }} />
+              <a href={socialsData.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="landing--social">
+                <div className="icon-box">
+                  <FaYoutube style={{ color: theme.secondary }} />
+                </div>
               </a>
             )}
+
             {socialsData?.blogger && (
-              <a href={socialsData.blogger} target="_blank" rel="noreferrer" aria-label="Blog">
-                <FaBlogger className="landing--social" style={{ color: theme.secondary }} />
+              <a href={socialsData.blogger} target="_blank" rel="noreferrer" aria-label="Blog" className="landing--social">
+                <div className="icon-box">
+                  <FaBlogger style={{ color: theme.secondary }} />
+                </div>
               </a>
             )}
           </div>
@@ -101,7 +124,7 @@ function Landing() {
         {/* RIGHT CONTENT */}
         <div className="landing--right" style={{ backgroundColor: theme.secondary }}>
           <div className="lcr--content" style={{ color: theme.tertiary }}>
-	    <h6>{headerData.title}</h6>
+            <h6>{headerData.title}</h6>
             <h1>{headerData.name}</h1>
 
             <div className="lcr-buttonContainer">
@@ -115,31 +138,53 @@ function Landing() {
               </NavLink>
             </div>
 
-            {/* Mobile-only socials (left stripe is hidden on mobile) */}
+            {/* Mobile-only socials (left stripe hidden on mobile) */}
             <div className="socials--mobile">
               {socialsData?.linkedIn && (
-                <a href={socialsData.linkedIn} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <FaLinkedin className="landing--social" style={{ color: theme.tertiary }} />
+                <a href={socialsData.linkedIn} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="landing--social">
+                  <div className="icon-box">
+                    <FaLinkedin style={{ color: theme.tertiary }} />
+                  </div>
                 </a>
               )}
+
               {socialsData?.github && (
-                <a href={socialsData.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <FaGithub className="landing--social" style={{ color: theme.tertiary }} />
+                <a href={socialsData.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="landing--social">
+                  <div className="icon-box">
+                    <FaGithub style={{ color: theme.tertiary }} />
+                  </div>
                 </a>
               )}
+
+              {socialsData?.tableau && (
+                <a href={socialsData.tableau} target="_blank" rel="noreferrer" aria-label="Tableau" className="landing--social">
+                  <div className="icon-box">
+                    <img src={tableauLogo} alt="Tableau" />
+                  </div>
+                </a>
+              )}
+
               {socialsData?.twitter && (
-                <a href={socialsData.twitter} target="_blank" rel="noreferrer" aria-label="Twitter / X">
-                  <FaTwitter className="landing--social" style={{ color: theme.tertiary }} />
+                <a href={socialsData.twitter} target="_blank" rel="noreferrer" aria-label="Twitter / X" className="landing--social">
+                  <div className="icon-box">
+                    <FaTwitter style={{ color: theme.tertiary }} />
+                  </div>
                 </a>
               )}
+
               {socialsData?.youtube && (
-                <a href={socialsData.youtube} target="_blank" rel="noreferrer" aria-label="YouTube">
-                  <FaYoutube className="landing--social" style={{ color: theme.tertiary }} />
+                <a href={socialsData.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="landing--social">
+                  <div className="icon-box">
+                    <FaYoutube style={{ color: theme.tertiary }} />
+                  </div>
                 </a>
               )}
+
               {socialsData?.blogger && (
-                <a href={socialsData.blogger} target="_blank" rel="noreferrer" aria-label="Blog">
-                  <FaBlogger className="landing--social" style={{ color: theme.tertiary }} />
+                <a href={socialsData.blogger} target="_blank" rel="noreferrer" aria-label="Blog" className="landing--social">
+                  <div className="icon-box">
+                    <FaBlogger style={{ color: theme.tertiary }} />
+                  </div>
                 </a>
               )}
             </div>

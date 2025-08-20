@@ -15,11 +15,11 @@
   overflow-x: hidden;
 }
 
-/* full-width grid split (NO max-width cap) */
+/* full-width grid split */
 .landing--container {
   position: relative;
   width: 100%;
-  max-width: none;                         /* <- stay edge-to-edge */
+  max-width: none;                   /* stay edge-to-edge */
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -32,7 +32,7 @@
 .landing--left {
   grid-column: 1 / 2;
   min-height: 100vh;
-  position: relative;                      /* allow absolute children */
+  position: relative;                /* allow absolute children */
   display: block;
   box-sizing: border-box;
 }
@@ -46,15 +46,42 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.6rem;                       /* space between icons */
 }
 
-/* social icons */
+/* Social link wrapper (hover etc.) */
 .landing--social {
-  font-size: 50px;
+  text-decoration: none;
   transition: transform 0.18s ease;
+  color: inherit;
+  display: inline-flex;
 }
 .landing--social:hover { transform: scale(1.12); }
+
+/* NEW: each icon sits in the same-size box */
+.icon-box {
+  width: 60px;                       /* uniform box width  */
+  height: 60px;                      /* uniform box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* React-icons (LinkedIn, GitHub) inside the box */
+.icon-box svg {
+  font-size: 48px;                   /* fits nicely inside 60x60 */
+}
+
+/* PNG/SVG <img> (Tableau) inside the same box */
+.icon-box img,
+.landing--social img {
+  max-width: 48px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
 /* ========== Right column ========== */
 .landing--right {
@@ -63,7 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 0;                         /* push inner content instead */
+  padding-left: 0;
   box-sizing: border-box;
 }
 
@@ -138,7 +165,7 @@
     padding: 2rem 1rem;
   }
 
-  /* hide left stripe on mobile, so we add a mobile socials row */
+  /* hide left stripe on mobile, show a mobile socials row */
   .landing--left { display: none; }
 
   .landing--profile {
@@ -159,8 +186,26 @@
   }
 
   .lcr--content h1 { font-size: 2rem; }
-  .socials--mobile { display: flex; gap: 1.25rem; margin-top: 1rem; }
-  .landing--social { font-size: 28px; }
+
+  .socials--mobile {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* smaller uniform boxes on mobile */
+  .icon-box {
+    width: 36px;
+    height: 36px;
+  }
+  .icon-box svg { font-size: 30px; }
+  .icon-box img,
+  .landing--social img {
+    max-width: 30px;
+    max-height: 30px;
+  }
 }
 
 @media (max-width: 420px) {
