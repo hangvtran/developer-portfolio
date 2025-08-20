@@ -77,6 +77,34 @@
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
+/* Match Experience heading sizes/weights */
+.volunteercard-content h6 {
+  font-family: var(--primaryFont);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.volunteercard-content h4 {
+  font-family: var(--primaryFont);
+  font-size: 1.225rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.volunteercard-content h5 {
+  font-family: var(--primaryFont);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.volunteercard-content p {
+  font-family: var(--primaryFont);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
 
 .volunteercard-details1 p {
     font-size: 1.1rem;

@@ -1,6 +1,6 @@
 export const aboutData = {
     title: "Who I am",
-    description1: "My name's Hang. I'm a data analyst based in New York, NY.",
-    description2: "During the day I work as a data analyst at Venera AI company and in the evening I  work as a volunteer at Project by Project to help people in the AAPI community. I spent my leisure hours reading books and practicing SQL. I love to learn and explore new arenas.",
+    description1: "My name's Hang. I'm a data analyst based in New York City.",
+    description2: "During the day, I work as a Data Analyst at Venera AI, and in the evenings, I volunteer as a Graphic Designer at Project by Project, supporting the AAPI community. In my free time, I enjoy reading and practicing SQL and Python. I’m currently open to new opportunities as a Data Analyst or Data Scientist.",
     image: 2
 }
