@@ -8,7 +8,7 @@ export const experienceData = [
     },
    {
         id: 2,
-        company: 'Venera AI',
+        company: 'Viet Spark',
         jobtitle: 'Data Analyst',
         startYear: 'May 2024',
         endYear: 'May 2025'
